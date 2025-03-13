@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockName: DefaultBlock
-  durability: 0
-  stack: 0
-  walkSpeed: 0
+  durability: 1
+  stack: 64
+  walkSpeed: 1
   isDangerous: 0
   damage: 0
