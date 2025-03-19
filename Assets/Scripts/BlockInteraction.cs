@@ -7,7 +7,8 @@ public class BlockInteraction : MonoBehaviour
     public Material highlightMaterial; // Materiale per evidenziare il blocco selezionato
     private Material originalMaterial; // Materiale originale del blocco
     private Transform selectedBlock; // Blocco attualmente selezionato
-    private GameObject lastRemovedBlockPrefab; // Ultimo blocco rimosso
+    public GameObject blockPrefab; // Assegna manualmente il prefab del blocco nell'Inspector
+
 
     void Update()
     {
@@ -47,30 +48,92 @@ public class BlockInteraction : MonoBehaviour
         }
     }
 
+ /* GG void HandleBlockPlacement()
+{
+    if (Input.GetMouseButtonDown(0) && selectedBlock != null) // Rimuovere un blocco
+    {
+        print("Rimuovo blocco");
+        Destroy(selectedBlock.gameObject);
+    }
+
+    if (Input.GetMouseButtonDown(1)) // Aggiungere un blocco
+    {
+        print("Piazzo blocco");
+        if (blockPrefab != null)
+        {
+            if (selectedBlock != null)
+            {
+                // Piazzamento sopra il blocco selezionato (Y+1)
+                Vector3 placePosition = selectedBlock.position + Vector3.up;
+                Instantiate(blockPrefab, placePosition, Quaternion.identity);
+            }
+            else
+            {
+                // Piazzamento normale con il raggio
+                Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, maxDistance))
+                {
+                    Vector3 placePosition = hit.point + hit.normal * 0.5f;
+                    placePosition = new Vector3(Mathf.Round(placePosition.x), Mathf.Round(placePosition.y), Mathf.Round(placePosition.z));
+                    Instantiate(blockPrefab, placePosition, Quaternion.identity);
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("Nessun prefab di blocco assegnato. Assegna un prefab nell'Inspector.");
+        }
+    }
+}*/
+
     void HandleBlockPlacement()
     {
         if (Input.GetMouseButtonDown(0) && selectedBlock != null) // Rimuovere un blocco
         {
             print("Rimuovo blocco");
-            lastRemovedBlockPrefab = selectedBlock.gameObject; // Memorizza il prefab rimosso
             Destroy(selectedBlock.gameObject);
         }
 
         if (Input.GetMouseButtonDown(1)) // Aggiungere un blocco
         {
             print("Piazzo blocco");
-            Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, maxDistance) && lastRemovedBlockPrefab != null)
+            if (blockPrefab != null)
             {
-                Vector3 placePosition = hit.point + hit.normal * 0.5f;
-                placePosition = new Vector3(Mathf.Round(placePosition.x), Mathf.Round(placePosition.y), Mathf.Round(placePosition.z));
+                Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+                RaycastHit hit;
 
-                Instantiate(lastRemovedBlockPrefab, placePosition, Quaternion.identity);
+                if (Physics.Raycast(ray, out hit, maxDistance))
+                {
+                    // Usa la normale della superficie per determinare la posizione del nuovo blocco
+                    Vector3 placePosition = hit.point + hit.normal * 0.5f; // Offset per evitare sovrapposizioni
+
+                    // Allinea la posizione alla griglia
+                    placePosition = new Vector3(Mathf.Round(placePosition.x), Mathf.Round(placePosition.y), Mathf.Round(placePosition.z));
+
+                    // Verifica se la posizione è libera
+                    if (!Physics.CheckSphere(placePosition, 0.1f)) // Controlla se c'è già un blocco
+                    {
+                        Instantiate(blockPrefab, placePosition, Quaternion.identity);
+                    }
+                    else
+                    {
+                        Debug.Log("Posizione occupata, non posso piazzare il blocco.");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Nessuna superficie colpita. Non posso piazzare il blocco.");
+                }
+            }
+            else
+            {
+                Debug.Log("Nessun prefab di blocco assegnato. Assegna un prefab nell'Inspector.");
             }
         }
     }
+
 
     void ResetBlockMaterial()
     {
