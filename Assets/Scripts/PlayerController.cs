@@ -1,3 +1,4 @@
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
         LookAround();
     }
 
-   void MovePlayer()
+    void MovePlayer()
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
@@ -37,9 +38,18 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(move * moveSpeed * Time.deltaTime);
 
+    
         velocity.y -= gravity * Time.deltaTime;
+    
+        // Limita la velocità di caduta per evitare una caduta troppo veloce nel caso fosse in aria senza aver saltato
+        float maxFallSpeed = -6f;
+        if (velocity.y < maxFallSpeed)
+        {
+            velocity.y = maxFallSpeed;
+        }
+
         controller.Move(velocity * Time.deltaTime);
-    }
+    }   
     void JumpHandler()
     {
         if (controller.isGrounded && Input.GetKeyDown(KeyCode.Space))
