@@ -14,6 +14,7 @@ TagManager:
   - Stone
   - Diamond
   - Bedrock
+  - Special
   layers:
   - Default
   - TransparentFX
