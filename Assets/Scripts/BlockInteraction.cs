@@ -51,6 +51,12 @@ public class BlockInteraction : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && selectedBlock != null) // Rimuovere un blocco
         {
+            if (selectedBlock.tag == "Bedrock")
+            {
+                Debug.Log("Non puoi rompere la Bedrock!");
+                return;
+            }
+
             print("Rimuovo blocco");
             Destroy(selectedBlock.gameObject);
         }
