@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 3
   tags:
   - Block
+  - Terracotta
+  - Log
+  - Leaf
+  - Dirt
+  - Grass
+  - Sand
+  - Stone
+  - Diamond
+  - Bedrock
   layers:
   - Default
   - TransparentFX
