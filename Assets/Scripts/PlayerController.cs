@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEditor.UIElements;
 using UnityEngine;
 
@@ -12,12 +13,15 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     private Camera playerCamera;
     private float xRotation = 0f;
+    [Header("Portal Settings")]
+    public LayerMask portalLayer;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     void Update()
@@ -25,6 +29,7 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         JumpHandler();
         LookAround();
+        CheckPortalInteraction();
     }
 
     void MovePlayer()
@@ -69,4 +74,30 @@ public class PlayerController : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
+    void CheckPortalInteraction()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.transform.position,
+                         playerCamera.transform.forward,
+                         out hit,
+                         portalLayer))
+        {
+            UnityEngine.Debug.Log("Rilevato portale: " + hit.collider.name);
+            Portal portal = hit.collider.GetComponent<Portal>();
+            if (portal != null && Input.GetKeyDown(KeyCode.E))
+            {
+                portal.LoadScene();
+            }
+        }
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Portal portal = hit.gameObject.GetComponent<Portal>();
+        if (portal != null)
+        {
+            portal.LoadScene(); 
+        }
+    }
 }
+
