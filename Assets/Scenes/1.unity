@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 2096244998}
   maxDistance: 4
-  highlightMaterial: {fileID: 2100000, guid: a764271ac6068134484040135523bba8, type: 2}
+  outlineMaterial: {fileID: 2100000, guid: a764271ac6068134484040135523bba8, type: 2}
   blockPrefab: {fileID: 4834169298855825832, guid: 7dbe30b62dc066d46a34446323ac373e, type: 3}
 --- !u!114 &1204073703
 MonoBehaviour:
