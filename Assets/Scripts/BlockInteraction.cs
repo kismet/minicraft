@@ -29,7 +29,7 @@ public class BlockInteraction : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, maxDistance))
         {
-            if (hit.collider.CompareTag("Block"))
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Block"))
             {
                 selectedBlock = hit.transform;
                 Renderer renderer = selectedBlock.GetComponent<Renderer>();
