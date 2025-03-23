@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-guid: 476cc7d7cd9874016adc216baab94a0a
-timeCreated: 1484146680
+guid: 83c2ed844a8c74b779a4c823d16594b1
+timeCreated: 1484217493
 licenseType: Store
-MonoImporter:
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -15,5 +11,5 @@ AssetOrigin:
   productId: 191449
   packageName: Simple Water Shader URP
   packageVersion: 1.0.0
-  assetPath: Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs
+  assetPath: Assets/IgniteCoders/Simple Water Shader/Info/Readme.asset
   uploadId: 422776
