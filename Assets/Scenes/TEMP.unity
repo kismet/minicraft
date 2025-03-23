@@ -128,7 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1540317078}
-  - component: {fileID: 1540317077}
   m_Layer: 0
   m_Name: ChunkGenerator
   m_TagString: Untagged
@@ -136,30 +135,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1540317077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540317076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45ddcad702a3b1d4d8a8560e204325ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bedrockPrefab: {fileID: 8826079431510409880, guid: 75a92a84baea54ad8b422a00cf324aa6, type: 3}
-  stonePrefab: {fileID: 8826079431510409880, guid: 80c6cae9364364ee39966ebd91e17d3d, type: 3}
-  dirtPrefab: {fileID: 8826079431510409880, guid: 4bf375771707d454e8123751db6b4ffb, type: 3}
-  grassPrefab: {fileID: 8826079431510409880, guid: 0cdf5086c63b14fc1b03558cd8ede709, type: 3}
-  treeTrunkPrefab: {fileID: 8826079431510409880, guid: 2ec14ca8e69bb4495891aff14da4b150, type: 3}
-  treeLeafPrefab: {fileID: 8826079431510409880, guid: c12a654010ed94d25aaf14ca18efcc68, type: 3}
-  chunkSize: 30
-  height: 12
-  terrainScale: 1
-  treeDensity: 0.05
-  treeHeight: 5
-  prefabPath: Assets/GeneratedChunk.prefab
 --- !u!4 &1540317078
 Transform:
   m_ObjectHideFlags: 0
