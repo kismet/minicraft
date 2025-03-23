@@ -4,10 +4,9 @@ public class BlockInteraction : MonoBehaviour
 {
     public Camera playerCamera;
     public float maxDistance = 4f;
-    public Material outlineMaterial; // Materiale per il contorno
-    private Material originalMaterial; // Materiale originale del blocco
-    private Transform selectedBlock; // Blocco attualmente selezionato
     public GameObject blockPrefab; // Assegna manualmente il prefab del blocco nell'Inspector
+    private Transform selectedBlock; // Blocco attualmente selezionato
+    private Outline outlineEffect; // Riferimento allo script di outline
 
     void Update()
     {
@@ -19,7 +18,7 @@ public class BlockInteraction : MonoBehaviour
     {
         if (selectedBlock != null)
         {
-            ResetBlockMaterial();
+            ResetBlockOutline();
         }
 
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
@@ -32,13 +31,16 @@ public class BlockInteraction : MonoBehaviour
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Block"))
             {
                 selectedBlock = hit.transform;
-                Renderer renderer = selectedBlock.GetComponent<Renderer>();
 
-                if (renderer != null)
+                // Ottieni o aggiungi lo script Outline
+                outlineEffect = selectedBlock.GetComponent<Outline>();
+                if (outlineEffect == null)
                 {
-                    originalMaterial = renderer.material;
-                    renderer.material = outlineMaterial; // Applica il materiale del contorno
+                    outlineEffect = selectedBlock.gameObject.AddComponent<Outline>();
                 }
+
+                // Attiva l'outline
+                outlineEffect.enabled = true;
             }
         }
         else
@@ -95,22 +97,11 @@ public class BlockInteraction : MonoBehaviour
         }
     }
 
-    void ResetBlockMaterial()
+    void ResetBlockOutline()
     {
-        if (selectedBlock != null && originalMaterial != null)
+        if (outlineEffect != null)
         {
-            selectedBlock.GetComponent<Renderer>().material = originalMaterial;
+            outlineEffect.enabled = false;
         }
     }
-
-    /*
-    void OnGUI()
-    {
-        float crosshairSize = 10f;
-        float x = (Screen.width - crosshairSize) / 2;
-        float y = (Screen.height - crosshairSize) / 2;
-        
-        GUI.Label(new Rect(x, y, crosshairSize, crosshairSize), "+");
-    }
-    */
 }
