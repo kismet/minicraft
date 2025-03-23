@@ -103,6 +103,7 @@ public class BlockInteraction : MonoBehaviour
         }
     }
 
+    /*
     void OnGUI()
     {
         float crosshairSize = 10f;
@@ -111,4 +112,5 @@ public class BlockInteraction : MonoBehaviour
         
         GUI.Label(new Rect(x, y, crosshairSize, crosshairSize), "+");
     }
+    */
 }

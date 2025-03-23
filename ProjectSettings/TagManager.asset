@@ -15,11 +15,13 @@ TagManager:
   - Diamond
   - Bedrock
   - Special
+  - Portal
+  - Terracotta2
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Portal
   - Water
   - UI
   - Block
