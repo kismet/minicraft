@@ -2138,6 +2138,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestaRandom
       objectReference: {fileID: 0}
+    - target: {fileID: 7577231716137879217, guid: 7b4ecaa07c0a0ae4c99993d859f0a49c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577231716137879217, guid: 7b4ecaa07c0a0ae4c99993d859f0a49c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

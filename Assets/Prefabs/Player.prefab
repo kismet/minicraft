@@ -143,10 +143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5310d91fa902c42cf8314b40d4ed3d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4.5
   mouseSensitivity: 2
   jumpForce: 5
-  gravity: 9.81
+  gravity: 10
+  portalLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2862026784439459718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 4745472879005891303}
   maxDistance: 4
-  outlineMaterial: {fileID: 2100000, guid: a764271ac6068134484040135523bba8, type: 2}
   blockPrefab: {fileID: 8826079431510409880, guid: 75a92a84baea54ad8b422a00cf324aa6, type: 3}
 --- !u!1 &5173067015126129126
 GameObject:
