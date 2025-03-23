@@ -1810,6 +1810,22 @@ PrefabInstance:
       propertyPath: portalLayer.m_Bits
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2862026784439459718, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 8826079431510409880, guid: f9e8bbb7feac842a88ceaaa652f501b8, type: 3}
+    - target: {fileID: 2862026784439459718, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
+      propertyPath: scriptToAdd
+      value: 
+      objectReference: {fileID: 800169897554976757, guid: 9740ba476a8cd9d41b433b4606607e15, type: 3}
+    - target: {fileID: 2862026784439459718, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
+      propertyPath: outlineMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9285cefbeb0511d4ca442e754b1a8bfb, type: 2}
+    - target: {fileID: 2862026784439459718, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
+      propertyPath: outlineCubePrefab
+      value: 
+      objectReference: {fileID: 7292130625583702183, guid: 1ce9b3ca5d5925c4fa841259197523cb, type: 3}
     - target: {fileID: 3524545459198941505, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
       propertyPath: m_Name
       value: Player
