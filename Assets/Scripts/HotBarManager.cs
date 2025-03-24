@@ -14,6 +14,7 @@ public class HotBarManager : MonoBehaviour
     {
         InitializeInventory();
         UpdateHotbarUI();
+        Block blockData = GetComponent<Block>();
     }
 
     void Update()
@@ -31,6 +32,7 @@ public class HotBarManager : MonoBehaviour
         inventory.Add("sand", 0);
         inventory.Add("terracotta", 0);
         inventory.Add("terracotta2", 0);
+        inventory.Add("leaf", 0);
     }
 
     void HandleHotbarSelection()
@@ -52,9 +54,9 @@ public class HotBarManager : MonoBehaviour
 
         if (inventory.ContainsKey(blockType))
         {
-            if (inventory[blockType] < maxStackSize)
+            if (inventory[blockType] < maxStackSize) // Limite massimo di 64
             {
-                inventory[blockType] = Mathf.Min(maxStackSize, inventory[blockType] + quantity);
+                inventory[blockType] = Mathf.Min(64, inventory[blockType] + quantity);
             }
             else
             {
@@ -63,11 +65,10 @@ public class HotBarManager : MonoBehaviour
         }
         else
         {
-            inventory[blockType] = Mathf.Min(maxStackSize, quantity);
+            inventory[blockType] = Mathf.Min(64, quantity);
         }
 
         Debug.Log($"Inventario aggiornato: {blockType} = {inventory[blockType]}");
-        UpdateHotbarUI();
     }
 
     public bool HasBlocks(string blockType)
