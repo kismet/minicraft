@@ -2138,6 +2138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestaRandom
       objectReference: {fileID: 0}
+    - target: {fileID: 7014470604669360590, guid: 7b4ecaa07c0a0ae4c99993d859f0a49c, type: 3}
+      propertyPath: targetSceneName
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 7577231716137879217, guid: 7b4ecaa07c0a0ae4c99993d859f0a49c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8

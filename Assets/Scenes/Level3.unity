@@ -2101,6 +2101,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1023566571191873443, guid: 297ad2090c555f34aa1d4ffae4f1f4de, type: 3}
+      propertyPath: targetSceneName
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 3100969835908808440, guid: 297ad2090c555f34aa1d4ffae4f1f4de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

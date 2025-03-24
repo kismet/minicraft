@@ -275,9 +275,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 526250388899758941, guid: dc9394acc2399a84a838d1e3bc2cb165, type: 3}
+      propertyPath: targetSceneName
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 1299318474679433017, guid: dc9394acc2399a84a838d1e3bc2cb165, type: 3}
       propertyPath: m_Name
       value: FORESTA_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802906573439977267, guid: dc9394acc2399a84a838d1e3bc2cb165, type: 3}
+      propertyPath: targetSceneName
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 4791145543183710744, guid: dc9394acc2399a84a838d1e3bc2cb165, type: 3}
       propertyPath: m_LocalPosition.x
@@ -318,6 +326,14 @@ PrefabInstance:
     - target: {fileID: 4791145543183710744, guid: dc9394acc2399a84a838d1e3bc2cb165, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831182491383270650, guid: dc9394acc2399a84a838d1e3bc2cb165, type: 3}
+      propertyPath: targetSceneName
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971985893281910332, guid: dc9394acc2399a84a838d1e3bc2cb165, type: 3}
+      propertyPath: targetSceneName
+      value: Level4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
