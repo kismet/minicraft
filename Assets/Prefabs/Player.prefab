@@ -164,7 +164,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 4745472879005891303}
   maxDistance: 4
-  blockPrefab: {fileID: 8826079431510409880, guid: 75a92a84baea54ad8b422a00cf324aa6, type: 3}
+  hotbarItems:
+  - {fileID: 0}
+  - {fileID: 8826079431510409880, guid: 75a92a84baea54ad8b422a00cf324aa6, type: 3}
+  - {fileID: 8826079431510409880, guid: 4bf375771707d454e8123751db6b4ffb, type: 3}
+  - {fileID: 8826079431510409880, guid: 0cdf5086c63b14fc1b03558cd8ede709, type: 3}
+  - {fileID: 8826079431510409880, guid: 2ec14ca8e69bb4495891aff14da4b150, type: 3}
+  - {fileID: 8826079431510409880, guid: c12a654010ed94d25aaf14ca18efcc68, type: 3}
+  - {fileID: 8826079431510409880, guid: bc68cb8a34f6047908bc03b6156551cc, type: 3}
+  - {fileID: 8826079431510409880, guid: d472d68557b434b168d78d241209b7c9, type: 3}
+  - {fileID: 8826079431510409880, guid: 80c6cae9364364ee39966ebd91e17d3d, type: 3}
+  currentSlotIndex: 0
 --- !u!1 &5173067015126129126
 GameObject:
   m_ObjectHideFlags: 0
