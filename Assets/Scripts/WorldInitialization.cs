@@ -24,12 +24,13 @@ public class WorldInitialization : MonoBehaviour
     }
 
     // Funzione per arrotondare le coordinate x, y, z
-    private Vector3 ArrotondaPosizione(Vector3 posizione)
-    {
-        float x = Mathf.Round(posizione.x);
-        float y = Mathf.Round(posizione.y);
-        float z = Mathf.Round(posizione.z);
+private Vector3 ArrotondaPosizione(Vector3 posizione)
+{
+    float x = Mathf.Floor(posizione.x + 0.5f);
+    float y = Mathf.Floor(posizione.y + 0.5f);
+    float z = Mathf.Floor(posizione.z + 0.5f);
 
-        return new Vector3(x, y, z);
-    }
+    return new Vector3(x, y, z);
+}
+
 }
