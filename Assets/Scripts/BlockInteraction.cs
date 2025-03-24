@@ -6,8 +6,7 @@ public class BlockInteraction : MonoBehaviour
 {
     public Camera playerCamera;
     public float maxDistance = 4f;
-    public GameObject[] hotbarItems = new GameObject[9];
-    public int currentSlotIndex = 0;
+    public HotBarManager hotBarManager;
 
     private Transform selectedBlock;
     private Outline outlineEffect;
@@ -15,22 +14,8 @@ public class BlockInteraction : MonoBehaviour
 
     void Update()
     {
-        HandleHotbarSelection();
         HandleBlockSelection();
         HandleBlockInteraction();
-    }
-
-    void HandleHotbarSelection()
-    {
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll > 0) currentSlotIndex = (currentSlotIndex + 1) % 9;
-        if (scroll < 0) currentSlotIndex = (currentSlotIndex - 1 + 9) % 9;
-
-        for (int i = 0; i < 9; i++)
-        {
-            if (Input.GetKeyDown((i + 1).ToString()))
-                currentSlotIndex = i;
-        }
     }
 
     void HandleBlockSelection()
@@ -64,29 +49,32 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockInteraction()
     {
-        // Distruzione blocchi e raccolta
-        if (Input.GetMouseButtonDown(0) && currentSlotIndex == 0 && selectedBlock != null)
+        // Break blocks
+        if (Input.GetMouseButtonDown(0))
         {
-            if (selectedBlock.CompareTag("Bedrock"))
+            if (hotBarManager.currentSlotIndex == 0 && selectedBlock != null)
             {
-                UnityEngine.Debug.Log("Non puoi rompere la Bedrock!");
-                return;
-            }
+                if (selectedBlock.CompareTag("Bedrock"))
+                {
+                    UnityEngine.Debug.Log("Non puoi rompere la Bedrock!");
+                    return;
+                }
 
-            string blockType = selectedBlock.tag;
-            AddToInventory(blockType, 1);
-            Destroy(selectedBlock.gameObject);
-            UnityEngine.Debug.Log($"Raccolto 1 {blockType}. Totale: {inventory[blockType]}");
+                string blockType = selectedBlock.tag;
+                AddToInventory(blockType, 1);
+                Destroy(selectedBlock.gameObject);
+                UnityEngine.Debug.Log($"Raccolto 1 {blockType}. Totale: {inventory[blockType]}");
+            }
         }
 
-        // Piazzamento blocchi
-
+        // Place blocks
         if (Input.GetMouseButtonDown(1))
         {
-            // Solo slot 1-8 e prefab assegnato
-            if (currentSlotIndex > 0 && hotbarItems[currentSlotIndex] != null)
+            if (hotBarManager.currentSlotIndex > 0 &&
+                hotBarManager.hotbarItems[hotBarManager.currentSlotIndex] != null)
             {
-                string blockType = hotbarItems[currentSlotIndex].tag;
+                GameObject blockToPlace = hotBarManager.hotbarItems[hotBarManager.currentSlotIndex];
+                string blockType = blockToPlace.tag;
 
                 if (HasBlocks(blockType))
                 {
@@ -104,7 +92,7 @@ public class BlockInteraction : MonoBehaviour
 
                         if (!Physics.CheckSphere(placePosition, 0.1f))
                         {
-                            Instantiate(hotbarItems[currentSlotIndex], placePosition, Quaternion.identity);
+                            Instantiate(blockToPlace, placePosition, Quaternion.identity);
                             RemoveFromInventory(blockType, 1);
                             UnityEngine.Debug.Log($"Piazzato {blockType}. Rimasti: {inventory[blockType]}");
                         }
@@ -122,10 +110,6 @@ public class BlockInteraction : MonoBehaviour
                 {
                     UnityEngine.Debug.Log($"Non hai {blockType} nell'inventory!");
                 }
-            }
-            else
-            {
-                UnityEngine.Debug.Log("Seleziona uno slot valido con un blocco!");
             }
         }
     }
@@ -155,10 +139,9 @@ public class BlockInteraction : MonoBehaviour
             outlineEffect.enabled = false;
     }
 
-    // Metodo per debug dell'inventory
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 200, 200), $"Slot selezionato: {currentSlotIndex}");
+        GUI.Label(new Rect(10, 10, 200, 200), $"Slot selezionato: {hotBarManager.currentSlotIndex}");
         int y = 30;
         foreach (var item in inventory)
         {
