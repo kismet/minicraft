@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
                          out hit,
                          portalLayer))
         {
-            UnityEngine.Debug.Log("Rilevato portale: " + hit.collider.name);
+            //UnityEngine.Debug.Log("Rilevato portale: " + hit.collider.name);
             Portal portal = hit.collider.GetComponent<Portal>();
             if (portal != null && Input.GetKeyDown(KeyCode.E))
             {

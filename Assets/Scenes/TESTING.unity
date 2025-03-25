@@ -461,6 +461,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8826079431510409880, guid: 2ec14ca8e69bb4495891aff14da4b150, type: 3}
     - target: {fileID: -2842085409860149646, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
+      propertyPath: 'hotbarItems.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8826079431510409880, guid: 80c6cae9364364ee39966ebd91e17d3d, type: 3}
+    - target: {fileID: -2842085409860149646, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
       propertyPath: 'hotbarItems.Array.data[5]'
       value: 
       objectReference: {fileID: 8826079431510409880, guid: bc68cb8a34f6047908bc03b6156551cc, type: 3}
