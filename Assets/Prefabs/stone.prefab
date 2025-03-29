@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockName: Stone
-  durability: 2
+  durability: 0.5
   stack: 64
   walkSpeed: 1
   isDangerous: 0

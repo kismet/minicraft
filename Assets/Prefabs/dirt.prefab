@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockName: Dirt
-  durability: 1
+  durability: 0.3
   stack: 64
   walkSpeed: 1
   isDangerous: 0

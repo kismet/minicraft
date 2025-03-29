@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockName: Leaf
-  durability: 0.5
+  durability: 0.1
   stack: 64
   walkSpeed: 0
   isDangerous: 0
