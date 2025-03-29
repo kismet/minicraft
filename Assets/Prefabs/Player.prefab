@@ -190,6 +190,7 @@ MonoBehaviour:
   - {fileID: 8826079431510409880, guid: 0cdf5086c63b14fc1b03558cd8ede709, type: 3}
   quantityTexts: []
   currentSlotIndex: 0
+  maxStackSize: 64
 --- !u!1 &5173067015126129126
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 8870833629855127331}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.43, z: 0}
+  m_LocalPosition: {x: 0.09, y: 5.43, z: -0.39}
   m_LocalScale: {x: 4.347826, y: 4.347826, z: 4.347826}
   m_ConstrainProportionsScale: 0
   m_Children: []
