@@ -8,6 +8,8 @@ public class BlockInteraction : MonoBehaviour
     public float maxDistance = 4f;
     public HotBarManager hotBarManager;
 
+    public string currentScreen = "Game"; // Variabile per gestire lo stato della schermata
+
     private Transform selectedBlock;
     private Transform breakingBlock;
     private Outline outlineEffect;
@@ -16,6 +18,9 @@ public class BlockInteraction : MonoBehaviour
 
     void Update()
     {
+        // Se il player è nella schermata "Default", blocca tutte le interazioni
+        if (currentScreen == "Default") return;
+
         HandleBlockSelection();
         HandleBlockDestruction();
         HandleBlockPlacement();
@@ -46,7 +51,7 @@ public class BlockInteraction : MonoBehaviour
         {
             selectedBlock = null;
         }
-        
+
         if (isBreaking && breakingBlock != selectedBlock)
         {
             StopBreaking();
@@ -55,6 +60,9 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockDestruction()
     {
+        // Se il player è nella schermata "Default", impedisci la distruzione dei blocchi
+        if (currentScreen == "Default") return;
+
         if (Input.GetMouseButtonDown(0) && selectedBlock != null)
         {
             Block blockData = selectedBlock.GetComponent<Block>();
@@ -86,7 +94,6 @@ public class BlockInteraction : MonoBehaviour
         }
 
         float breakTime = blockData.Durability;
-
         float elapsedTime = 0f;
 
         while (elapsedTime < breakTime)
@@ -121,6 +128,9 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockPlacement()
     {
+        // Se il player è nella schermata "Default", impedisci il piazzamento dei blocchi
+        if (currentScreen == "Default") return;
+
         if (Input.GetMouseButtonDown(1))
         {
             if (hotBarManager.currentSlotIndex > 0 && hotBarManager.hotbarItems[hotBarManager.currentSlotIndex] != null)
@@ -153,5 +163,10 @@ public class BlockInteraction : MonoBehaviour
     {
         if (outlineEffect != null)
             outlineEffect.enabled = false;
+    }
+
+    public void SetCurrentScreen(string screen)
+    {
+        currentScreen = screen;
     }
 }
