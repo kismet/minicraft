@@ -8,6 +8,7 @@ public class Block : MonoBehaviour
     [SerializeField] private float walkSpeed;
     [SerializeField] private bool isDangerous;
     [SerializeField] private int damage;
+    [SerializeField] private bool isBreakable;
 
     // Proprietà in sola lettura per l'accesso da altri script
     public string BlockName => blockName;
@@ -16,8 +17,9 @@ public class Block : MonoBehaviour
     public float WalkSpeed => walkSpeed;
     public bool IsDangerous => isDangerous;
     public int Damage => damage;
+    public bool IsBreakable => isBreakable;
 
-    public void InizializzaBlocco(string blockName, float durability, int stack, float walkSpeed, bool isDangerous, int damage)
+    public void InizializzaBlocco(string blockName, float durability, int stack, float walkSpeed, bool isDangerous, int damage, bool isBreakable)
     {
         this.blockName = blockName;
         this.durability = durability;
@@ -25,5 +27,6 @@ public class Block : MonoBehaviour
         this.walkSpeed = walkSpeed;
         this.isDangerous = isDangerous;
         this.damage = damage;
+        this.isBreakable = isBreakable;
     }
 }

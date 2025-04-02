@@ -140,3 +140,4 @@ MonoBehaviour:
   walkSpeed: 0
   isDangerous: 0
   damage: 0
+  isBreakable: 1

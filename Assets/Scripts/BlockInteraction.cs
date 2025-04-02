@@ -9,7 +9,7 @@ public class BlockInteraction : MonoBehaviour
     public HotBarManager hotBarManager;
 
     private Transform selectedBlock;
-    private Transform breakingBlock; // Blocco attualmente in rottura
+    private Transform breakingBlock;
     private Outline outlineEffect;
     private bool isBreaking = false;
     private Coroutine breakCoroutine;
@@ -46,8 +46,7 @@ public class BlockInteraction : MonoBehaviour
         {
             selectedBlock = null;
         }
-
-        // Se il giocatore sta rompendo un blocco ma non lo sta più guardando, interrompi la rottura
+        
         if (isBreaking && breakingBlock != selectedBlock)
         {
             StopBreaking();
@@ -56,12 +55,17 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockDestruction()
     {
-        if (Input.GetMouseButtonDown(0) && selectedBlock != null && selectedBlock.tag != "Bedrock")
+        if (Input.GetMouseButtonDown(0) && selectedBlock != null)
         {
-            if (!isBreaking && hotBarManager.currentSlotIndex == 0) // Controlla se il primo slot è selezionato
+            Block blockData = selectedBlock.GetComponent<Block>();
+
+            if (blockData != null && blockData.IsBreakable && hotBarManager.currentSlotIndex == 0)
             {
-                breakingBlock = selectedBlock; // Salva il blocco in rottura
-                breakCoroutine = StartCoroutine(BreakBlock(selectedBlock));
+                if (!isBreaking)
+                {
+                    breakingBlock = selectedBlock;
+                    breakCoroutine = StartCoroutine(BreakBlock(selectedBlock));
+                }
             }
         }
 
@@ -75,13 +79,19 @@ public class BlockInteraction : MonoBehaviour
     {
         isBreaking = true;
         Block blockData = block.GetComponent<Block>();
-        float breakTime = blockData != null ? blockData.Durability : 1f;
+        if (blockData == null || !blockData.IsBreakable)
+        {
+            StopBreaking();
+            yield break;
+        }
+
+        float breakTime = blockData.Durability;
 
         float elapsedTime = 0f;
 
         while (elapsedTime < breakTime)
         {
-            if (!isBreaking || breakingBlock != selectedBlock) // Interrompi se il blocco non è più selezionato
+            if (!isBreaking || breakingBlock != selectedBlock)
             {
                 StopBreaking();
                 yield break;
