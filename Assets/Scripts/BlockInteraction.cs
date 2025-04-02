@@ -9,6 +9,7 @@ public class BlockInteraction : MonoBehaviour
     public HotBarManager hotBarManager;
 
     private Transform selectedBlock;
+    private Transform breakingBlock; // Blocco attualmente in rottura
     private Outline outlineEffect;
     private bool isBreaking = false;
     private Coroutine breakCoroutine;
@@ -45,6 +46,12 @@ public class BlockInteraction : MonoBehaviour
         {
             selectedBlock = null;
         }
+
+        // Se il giocatore sta rompendo un blocco ma non lo sta più guardando, interrompi la rottura
+        if (isBreaking && breakingBlock != selectedBlock)
+        {
+            StopBreaking();
+        }
     }
 
     void HandleBlockDestruction()
@@ -53,14 +60,14 @@ public class BlockInteraction : MonoBehaviour
         {
             if (!isBreaking && hotBarManager.currentSlotIndex == 0) // Controlla se il primo slot è selezionato
             {
+                breakingBlock = selectedBlock; // Salva il blocco in rottura
                 breakCoroutine = StartCoroutine(BreakBlock(selectedBlock));
             }
         }
 
         if (Input.GetMouseButtonUp(0) && isBreaking)
         {
-            StopCoroutine(breakCoroutine);
-            isBreaking = false;
+            StopBreaking();
         }
     }
 
@@ -70,13 +77,36 @@ public class BlockInteraction : MonoBehaviour
         Block blockData = block.GetComponent<Block>();
         float breakTime = blockData != null ? blockData.Durability : 1f;
 
-        yield return new WaitForSeconds(breakTime);
+        float elapsedTime = 0f;
+
+        while (elapsedTime < breakTime)
+        {
+            if (!isBreaking || breakingBlock != selectedBlock) // Interrompi se il blocco non è più selezionato
+            {
+                StopBreaking();
+                yield break;
+            }
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
 
         string blockType = block.tag;
-        hotBarManager.AddToInventory(blockType, 1); // Aggiunge il blocco all'inventario
+        hotBarManager.AddToInventory(blockType, 1);
         Debug.Log("Rimozione Blocco " + blockType);
         Destroy(block.gameObject);
         isBreaking = false;
+    }
+
+    void StopBreaking()
+    {
+        if (breakCoroutine != null)
+        {
+            StopCoroutine(breakCoroutine);
+            breakCoroutine = null;
+        }
+        isBreaking = false;
+        breakingBlock = null;
     }
 
     void HandleBlockPlacement()
