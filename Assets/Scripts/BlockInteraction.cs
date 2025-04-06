@@ -118,6 +118,7 @@ public class BlockInteraction : MonoBehaviour
         if (blockType == "Diamond")
         {
             
+            DiamondManager.Instance.AddDiamond(); // Incrementa e salva automaticamente
             // Distruggi il blocco
             Destroy(block.gameObject);
             

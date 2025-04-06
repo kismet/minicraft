@@ -315,6 +315,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1179030693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179030695}
+  - component: {fileID: 1179030694}
+  m_Layer: 0
+  m_Name: DiamondCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1179030694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179030693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe927dc06648c44409540db6a7006375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diamondText: {fileID: 1729817455}
+--- !u!4 &1179030695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179030693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -377.16214, y: 112.64964, z: 352.8871}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1556552247
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,31 +729,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1729817452 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5931036340657147005, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
-  m_PrefabInstance: {fileID: 4979035675048186294}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1729817454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729817452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff24bb11cc52f946b0205481dca610a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diamondCounter: {fileID: 11400000, guid: e47e28aacc3de8044a581b77b7bc44bc, type: 2}
-  diamondText: {fileID: 1729817455}
 --- !u!114 &1729817455 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6025137993072925417, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
   m_PrefabInstance: {fileID: 4979035675048186294}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729817452}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -949,10 +975,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5931036340657147005, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1729817454}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -966,3 +989,4 @@ SceneRoots:
   - {fileID: 353352678}
   - {fileID: 2008993975}
   - {fileID: 1590605640}
+  - {fileID: 1179030695}
