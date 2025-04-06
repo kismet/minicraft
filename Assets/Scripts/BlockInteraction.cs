@@ -1,14 +1,17 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement; // Aggiungi questa riga per usare SceneManager
 
 public class BlockInteraction : MonoBehaviour
 {
+    [Header("References")]
     public Camera playerCamera;
-    public float maxDistance = 4f;
     public HotBarManager hotBarManager;
-
-    public string currentScreen = "Game"; // Variabile per gestire lo stato della schermata
+    
+    [Header("Settings")]
+    public float maxDistance = 4f;
+    public string currentScreen = "Game";
+    public string diamondSceneName; // Aggiungi questo campo per configurare la scena dall'Inspector
 
     private Transform selectedBlock;
     private Transform breakingBlock;
@@ -16,9 +19,13 @@ public class BlockInteraction : MonoBehaviour
     private bool isBreaking = false;
     private Coroutine breakCoroutine;
 
+    void Start()
+    {
+
+    }
+
     void Update()
     {
-        // Se il player è nella schermata "Default", blocca tutte le interazioni
         if (currentScreen == "Default") return;
 
         HandleBlockSelection();
@@ -60,7 +67,6 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockDestruction()
     {
-        // Se il player è nella schermata "Default", impedisci la distruzione dei blocchi
         if (currentScreen == "Default") return;
 
         if (Input.GetMouseButtonDown(0) && selectedBlock != null)
@@ -95,6 +101,7 @@ public class BlockInteraction : MonoBehaviour
 
         float breakTime = blockData.Durability;
         float elapsedTime = 0f;
+        string blockType = block.tag;
 
         while (elapsedTime < breakTime)
         {
@@ -108,10 +115,24 @@ public class BlockInteraction : MonoBehaviour
             yield return null;
         }
 
-        string blockType = block.tag;
-        hotBarManager.AddToInventory(blockType, 1);
-        Debug.Log("Rimozione Blocco " + blockType);
-        Destroy(block.gameObject);
+        if (blockType == "Diamond")
+        {
+            
+            // Distruggi il blocco
+            Destroy(block.gameObject);
+            
+            // Carica la scena specificata
+            if (!string.IsNullOrEmpty(diamondSceneName))
+            {
+                SceneManager.LoadScene(diamondSceneName);
+            }
+        }
+        else
+        {
+            hotBarManager.AddToInventory(blockType, 1);
+            Destroy(block.gameObject);
+        }
+
         isBreaking = false;
     }
 
@@ -128,7 +149,6 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockPlacement()
     {
-        // Se il player è nella schermata "Default", impedisci il piazzamento dei blocchi
         if (currentScreen == "Default") return;
 
         if (Input.GetMouseButtonDown(1))
@@ -146,7 +166,11 @@ public class BlockInteraction : MonoBehaviour
                     if (Physics.Raycast(ray, out hit, maxDistance))
                     {
                         Vector3 placePosition = hit.point + hit.normal * 0.5f;
-                        placePosition = new Vector3(Mathf.Round(placePosition.x), Mathf.Round(placePosition.y), Mathf.Round(placePosition.z));
+                        placePosition = new Vector3(
+                            Mathf.Round(placePosition.x),
+                            Mathf.Round(placePosition.y),
+                            Mathf.Round(placePosition.z)
+                        );
 
                         if (!Physics.CheckSphere(placePosition, 0.1f))
                         {

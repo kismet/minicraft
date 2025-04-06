@@ -549,6 +549,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 9285cefbeb0511d4ca442e754b1a8bfb, type: 2}
     - target: {fileID: 2862026784439459718, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
+      propertyPath: diamondSceneName
+      value: Desert
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862026784439459718, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
       propertyPath: outlineCubePrefab
       value: 
       objectReference: {fileID: 7292130625583702183, guid: 1ce9b3ca5d5925c4fa841259197523cb, type: 3}
@@ -558,15 +562,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223586336439785354, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 79.77251
+      value: -214.09206
       objectReference: {fileID: 0}
     - target: {fileID: 8223586336439785354, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 440.78998
+      value: 12.751101
       objectReference: {fileID: 0}
     - target: {fileID: 8223586336439785354, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 293.39044
+      value: 369.9991
       objectReference: {fileID: 0}
     - target: {fileID: 8223586336439785354, guid: b137eb730afcc4a02b313d399eee0ba4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -678,6 +682,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1729817452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5931036340657147005, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
+  m_PrefabInstance: {fileID: 4979035675048186294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729817454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729817452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff24bb11cc52f946b0205481dca610a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diamondCounter: {fileID: 11400000, guid: e47e28aacc3de8044a581b77b7bc44bc, type: 2}
+  diamondText: {fileID: 1729817455}
+--- !u!114 &1729817455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6025137993072925417, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
+  m_PrefabInstance: {fileID: 4979035675048186294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729817452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1923835700 stripped
@@ -904,6 +938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5931036340657147005, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
+      propertyPath: m_Name
+      value: DiamondCounter
+      objectReference: {fileID: 0}
     - target: {fileID: 8090288566356125027, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -911,7 +949,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5931036340657147005, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1729817454}
   m_SourcePrefab: {fileID: 100100000, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
