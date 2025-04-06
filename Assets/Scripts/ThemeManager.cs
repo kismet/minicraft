@@ -4,20 +4,13 @@ public class AudioController : MonoBehaviour
 {
     public AudioSource audioSource;
 
-    void Update()
+    void Start()
     {
-        // Se viene premuto il tasto "P", riproduce l'audio
-        if (Input.GetKeyDown(KeyCode.P))
+        // Imposta l'audio in loop all'avvio
+        if (audioSource != null)
         {
-            PlayAudio();
-        }
-    }
-
-    public void PlayAudio()
-    {
-        if (audioSource != null && !audioSource.isPlaying)
-        {
-            audioSource.Play();
+            audioSource.loop = true;
+            audioSource.Play(); // Avvia la riproduzione automaticamente
         }
     }
 }
