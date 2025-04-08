@@ -12,7 +12,7 @@ public class ToolbarUI : MonoBehaviour
         // Controlla che l'array sia stato assegnato correttamente
         if (slotHighlights == null || slotHighlights.Length == 0)
         {
-            Debug.LogError("slotHighlights non è stato assegnato! Controlla l'Inspector.");
+            Debug.LogError("slotHighlights non ï¿½ stato assegnato! Controlla l'Inspector.");
             return;
         }
 
@@ -26,15 +26,6 @@ public class ToolbarUI : MonoBehaviour
 
     void GestisciSelezioneSlot()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            CambiaSlot(1);
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-        {
-            CambiaSlot(-1);
-        }
-
         for (int i = 0; i < slotHighlights.Length; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
@@ -43,13 +34,7 @@ public class ToolbarUI : MonoBehaviour
             }
         }
     }
-
-    void CambiaSlot(int direzione)
-    {
-        selectedSlot = (selectedSlot + direzione + slotHighlights.Length) % slotHighlights.Length;
-        AggiornaEvidenziazione();
-    }
-
+    
     void SelezionaSlot(int nuovoSlot)
     {
         if (nuovoSlot >= 0 && nuovoSlot < slotHighlights.Length)
