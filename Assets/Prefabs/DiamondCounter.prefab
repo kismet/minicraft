@@ -44,4 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe927dc06648c44409540db6a7006375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DesertDiamond: 1
+  ForestDiamond: 1
+  MesaDiamond: 1
+  MountainDiamond: 1
+  victorySceneName: Credits
   diamondText: {fileID: 0}
