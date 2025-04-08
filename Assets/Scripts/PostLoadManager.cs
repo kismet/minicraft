@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PostLoadManager : MonoBehaviour
 {
@@ -7,10 +9,23 @@ public class PostLoadManager : MonoBehaviour
 
     void Start()
     {
-        if (playerUI != null)
-            playerUI.SetActive(true);
+        if (loadingScreen != null)
+            loadingScreen.SetActive(true);
+
+        StartCoroutine(WaitForSceneReady());
+    }
+
+    IEnumerator WaitForSceneReady()
+    {
+        
+        yield return null;
+
+        yield return new WaitForSeconds(0.5f);
 
         if (loadingScreen != null)
             loadingScreen.SetActive(false);
+
+        if (playerUI != null)
+            playerUI.SetActive(true);
     }
 }
