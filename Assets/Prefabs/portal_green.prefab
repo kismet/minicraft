@@ -375,9 +375,9 @@ GameObject:
   - component: {fileID: 8797482376976574437}
   - component: {fileID: 7653319357477173424}
   - component: {fileID: 3465094580471622152}
-  - component: {fileID: 2434818065050907850}
   - component: {fileID: 5483378715203055167}
   - component: {fileID: 4045858673358434538}
+  - component: {fileID: 8213541542050298454}
   m_Layer: 0
   m_Name: PortalBlock (5)
   m_TagString: Portal
@@ -474,19 +474,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2434818065050907850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275505124839675396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetSceneName: Forest
 --- !u!114 &5483378715203055167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +498,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8213541542050298454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275505124839675396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSceneName: 
 --- !u!1 &1521332330559810353
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,9 +523,9 @@ GameObject:
   - component: {fileID: 9131528777554549456}
   - component: {fileID: 7969497766594069893}
   - component: {fileID: 3799111466002650941}
-  - component: {fileID: 3305333371591709152}
   - component: {fileID: 4113756517740980396}
   - component: {fileID: 458157114514741901}
+  - component: {fileID: 7372664240804925932}
   m_Layer: 0
   m_Name: PortalBlock (1)
   m_TagString: Portal
@@ -622,19 +622,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3305333371591709152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521332330559810353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetSceneName: Forest
 --- !u!114 &4113756517740980396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +646,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7372664240804925932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521332330559810353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSceneName: 
 --- !u!1 &1771133735225329328
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +792,6 @@ GameObject:
   - component: {fileID: 8574428444577675269}
   - component: {fileID: 7412537726587643728}
   - component: {fileID: 4395213656243598824}
-  - component: {fileID: 1991568079367215673}
   - component: {fileID: 6107197207213573530}
   - component: {fileID: 5736048193110763895}
   m_Layer: 0
@@ -891,19 +890,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1991568079367215673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115305919871863268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetSceneName: Forest
 --- !u!114 &6107197207213573530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,9 +926,9 @@ GameObject:
   - component: {fileID: 5732848393245560286}
   - component: {fileID: 6894951420004176523}
   - component: {fileID: 400742887736000563}
-  - component: {fileID: 6572773061066944212}
   - component: {fileID: 6795012366566336749}
   - component: {fileID: 1061124787442464558}
+  - component: {fileID: 2897119610661060212}
   m_Layer: 0
   m_Name: PortalBlock (3)
   m_TagString: Portal
@@ -1039,19 +1025,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6572773061066944212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2605971777031175231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetSceneName: Forest
 --- !u!114 &6795012366566336749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,6 +1049,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2897119610661060212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605971777031175231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSceneName: 
 --- !u!1 &3201302448588723901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,9 +1074,9 @@ GameObject:
   - component: {fileID: 5172420622559012700}
   - component: {fileID: 6334528184871450633}
   - component: {fileID: 993241165801073329}
-  - component: {fileID: 1420302424848261483}
   - component: {fileID: 8763481267299629526}
   - component: {fileID: 8463574905968311419}
+  - component: {fileID: 6659387074884581948}
   m_Layer: 0
   m_Name: PortalBlock (4)
   m_TagString: Portal
@@ -1187,19 +1173,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1420302424848261483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3201302448588723901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetSceneName: Forest
 --- !u!114 &8763481267299629526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,6 +1197,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6659387074884581948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3201302448588723901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSceneName: 
 --- !u!1 &3459218840765754982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,9 +1891,9 @@ GameObject:
   - component: {fileID: 6271762327198225655}
   - component: {fileID: 5127669710806928290}
   - component: {fileID: 2092296060029704474}
-  - component: {fileID: 5989257558031888259}
   - component: {fileID: 7335135801589293411}
   - component: {fileID: 420568781450053016}
+  - component: {fileID: 2125144396893332655}
   m_Layer: 0
   m_Name: PortalBlock (2)
   m_TagString: Portal
@@ -2004,19 +1990,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5989257558031888259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4372054193970816278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetSceneName: Forest
 --- !u!114 &7335135801589293411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2041,6 +2014,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2125144396893332655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4372054193970816278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9059347ed0c52304fb5d69ac00383424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSceneName: 
 --- !u!1 &4922812495779906301
 GameObject:
   m_ObjectHideFlags: 0

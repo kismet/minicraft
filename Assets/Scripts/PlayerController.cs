@@ -1,5 +1,3 @@
-using System.Diagnostics;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,15 +11,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     private Camera playerCamera;
     private float xRotation = 0f;
-    [Header("Portal Settings")]
-    public LayerMask portalLayer;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
-
     }
 
     void Update()
@@ -29,7 +24,6 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         JumpHandler();
         LookAround();
-        CheckPortalInteraction();
     }
 
     void MovePlayer()
@@ -37,16 +31,22 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        // Calcola la direzione del movimento in base alla direzione della camera
-        Vector3 move = playerCamera.transform.right * moveX + playerCamera.transform.forward * moveZ;
-        move.y = 0f; // Blocca il movimento verticale per evitare che il player si muova in diagonale
+        // Prendi la direzione orizzontale della camera, ignorando l'inclinazione verticale
+        Vector3 cameraForward = playerCamera.transform.forward;
+        Vector3 cameraRight = playerCamera.transform.right;
+
+        cameraForward.y = 0f;
+        cameraRight.y = 0f;
+
+        cameraForward.Normalize();
+        cameraRight.Normalize();
+
+        Vector3 move = cameraRight * moveX + cameraForward * moveZ;
 
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-    
         velocity.y -= gravity * Time.deltaTime;
-    
-        // Limita la velocità di caduta per evitare una caduta troppo veloce nel caso fosse in aria senza aver saltato
+
         float maxFallSpeed = -6f;
         if (velocity.y < maxFallSpeed)
         {
@@ -54,7 +54,8 @@ public class PlayerController : MonoBehaviour
         }
 
         controller.Move(velocity * Time.deltaTime);
-    }   
+    }
+
     void JumpHandler()
     {
         if (controller.isGrounded && Input.GetKeyDown(KeyCode.Space))
@@ -74,30 +75,4 @@ public class PlayerController : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
-    void CheckPortalInteraction()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position,
-                         playerCamera.transform.forward,
-                         out hit,
-                         portalLayer))
-        {
-            //UnityEngine.Debug.Log("Rilevato portale: " + hit.collider.name);
-            Portal portal = hit.collider.GetComponent<Portal>();
-            if (portal != null && Input.GetKeyDown(KeyCode.E))
-            {
-                portal.LoadScene();
-            }
-        }
-    }
-
-    void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        Portal portal = hit.gameObject.GetComponent<Portal>();
-        if (portal != null)
-        {
-            portal.LoadScene(); 
-        }
-    }
 }
-
