@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8170836600325494866}
   - component: {fileID: -8792713247405936116}
   - component: {fileID: -1798254783247796576}
+  - component: {fileID: 7222802608752811461}
   m_Layer: 6
   m_Name: diamond
   m_TagString: Diamond
@@ -141,3 +142,16 @@ MonoBehaviour:
   isDangerous: 0
   damage: 0
   isBreakable: 1
+--- !u!114 &7222802608752811461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8826079431510409880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e66dc2c8ccc6d24baef474aac87bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueID: 
