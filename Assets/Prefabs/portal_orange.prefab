@@ -2394,6 +2394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8415318675199598111}
+  - component: {fileID: 3669496979125396081}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -2422,6 +2423,19 @@ Transform:
   - {fileID: 2199479477058419140}
   m_Father: {fileID: 1970048093525090583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3669496979125396081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919885981643282185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb57090dd598e60478bb37c0aa3434bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Mesa
 --- !u!1 &9086886100196242972
 GameObject:
   m_ObjectHideFlags: 0
