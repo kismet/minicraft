@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 3958505686523012086}
   - component: {fileID: 6025137993072925417}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: DiamondCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
