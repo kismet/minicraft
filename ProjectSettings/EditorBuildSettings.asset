@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 63c70fdba726046df92c94df1476a793
   - enabled: 1
+    path: Assets/Scenes/Default.unity
+    guid: 88aec4414ecd48645b366c3666c47f3f
+  - enabled: 1
+    path: Assets/Scenes/Mountain.unity
+    guid: ada700ad2a4782f4f80089f5686018af
+  - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
@@ -17,12 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mesa.unity
     guid: 0a6760f94d8b3ae4b955990df6b1d4e4
-  - enabled: 1
-    path: Assets/Scenes/Default.unity
-    guid: 88aec4414ecd48645b366c3666c47f3f
-  - enabled: 1
-    path: Assets/Scenes/Mountain.unity
-    guid: ada700ad2a4782f4f80089f5686018af
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

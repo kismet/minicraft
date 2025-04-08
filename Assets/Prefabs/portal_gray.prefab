@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 2434818065050907850}
   - component: {fileID: 5483378715203055167}
   - component: {fileID: 4045858673358434538}
+  - component: {fileID: 922062251087327007}
   m_Layer: 0
   m_Name: PortalBlock (5)
   m_TagString: Portal
@@ -511,6 +512,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &922062251087327007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275505124839675396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b5bf1c3c64e4eb0aac99e2d0bf2f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
 --- !u!1 &1521332330559810353
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +541,7 @@ GameObject:
   - component: {fileID: 3305333371591709152}
   - component: {fileID: 4113756517740980396}
   - component: {fileID: 458157114514741901}
+  - component: {fileID: 4289422584779512606}
   m_Layer: 0
   m_Name: PortalBlock (1)
   m_TagString: Portal
@@ -659,6 +675,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4289422584779512606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521332330559810353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b5bf1c3c64e4eb0aac99e2d0bf2f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
 --- !u!1 &1771133735225329328
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +825,7 @@ GameObject:
   - component: {fileID: 1991568079367215673}
   - component: {fileID: 6107197207213573530}
   - component: {fileID: 5736048193110763895}
+  - component: {fileID: 4917500546328342069}
   m_Layer: 0
   m_Name: PortalBlock
   m_TagString: Portal
@@ -928,6 +959,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4917500546328342069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115305919871863268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b5bf1c3c64e4eb0aac99e2d0bf2f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
 --- !u!1 &2605971777031175231
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +988,7 @@ GameObject:
   - component: {fileID: 6572773061066944212}
   - component: {fileID: 6795012366566336749}
   - component: {fileID: 1061124787442464558}
+  - component: {fileID: 4483340885101338869}
   m_Layer: 0
   m_Name: PortalBlock (3)
   m_TagString: Portal
@@ -1076,6 +1122,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4483340885101338869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605971777031175231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b5bf1c3c64e4eb0aac99e2d0bf2f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
 --- !u!1 &3201302448588723901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1151,7 @@ GameObject:
   - component: {fileID: 1420302424848261483}
   - component: {fileID: 8763481267299629526}
   - component: {fileID: 8463574905968311419}
+  - component: {fileID: 7613476856515001349}
   m_Layer: 0
   m_Name: PortalBlock (4)
   m_TagString: Portal
@@ -1224,6 +1285,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7613476856515001349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3201302448588723901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b5bf1c3c64e4eb0aac99e2d0bf2f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
 --- !u!1 &3459218840765754982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1983,7 @@ GameObject:
   - component: {fileID: 5989257558031888259}
   - component: {fileID: 7335135801589293411}
   - component: {fileID: 420568781450053016}
+  - component: {fileID: 7394376731182027157}
   m_Layer: 0
   m_Name: PortalBlock (2)
   m_TagString: Portal
@@ -2041,6 +2117,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250faee2ea641024990dc605488fc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7394376731182027157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4372054193970816278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b5bf1c3c64e4eb0aac99e2d0bf2f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  loadingSlider: {fileID: 0}
 --- !u!1 &4922812495779906301
 GameObject:
   m_ObjectHideFlags: 0
