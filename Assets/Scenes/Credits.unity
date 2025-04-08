@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -594.1533}
+  m_AnchoredPosition: {x: 0, y: 3456}
   m_SizeDelta: {x: 600, y: 2500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349626544
@@ -176,15 +176,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Crediti:\n\nEcco chi ha partecipato al progetto:\n\nGRUPPO PROGRAMMAZIONE:\n\nMailat
-    Elisei, Pavel Cavallini, Christian Conti.\n\nGRUPPO PRESENTAZIONE:\n\nRebecca
-    Fatticcioni, Alessandro Mazzinghi, Sheila Sulis, Claudio Falchi.\n\nGRUPPO GESTIONE:
-    \n\nTicciati Nicholas, Alessandro Mazzinghi, Mailat Elisei, Mirko Pratesi, Pavel
-    Cavallini, Christian Bangoni.\n\nGRUPPO REGOLE:\n\nAlberto Pilloni, Cristian
-    Terzi, Mirko Pratesi, Paolo Betti, Christian Conti.\n\nGRUPPO GRAFICA: \n\nNiccol\xF2
-    Gracci, Sorea Timotei, Francesco Boscia, Mailat Elisei, Christian Conti, Mirko
-    Pratesi, Gabriele Cerbioni, Federico Baldini, Alberto Pilloni, Paolo Betti.\n\nGRUPPO
-    SUPPORTO: \n\nChristian Conti, Mirko Pratesi, Pavel Cavallini, Alessandro Mazzinghi."
+  m_text: "MINIPLACE\n\n\nCrediti:\n\nDOCENTI:\n\nStefano Lenzi \n\nPierocarmine
+    Fantauzzi\n\nKatiuscia Totti\n\n\n\nGRUPPO PROGRAMMAZIONE:\n\nElisei Mailat\n\nPavel
+    Cavallini  -- (Referente)\n\nChristian Conti\n\nChatGPT\n\n\n\nGRUPPO PRESENTAZIONE:\n\nRebecca
+    Fatticcioni\n\nAlessandro Mazzinghi\n\nSheila Sulis\n\nClaudio Falchi  -- (Referente)\n\n\n\nGRUPPO
+    GESTIONE: \n\nNicholas Ticciati\n\nAlessandro Mazzinghi  -- (Referente)\n\nElisei
+    Mailat\n\nMirko Pratesi\n\nPavel Cavallini\n\nChristian Bangoni\n\n\n\nGRUPPO
+    REGOLE:\n\nAlberto Pilloni\n\nCristian Terzi\n\nMirko Pratesi  -- (Referente)\n\nPaolo
+    Betti\n\nChristian Conti\n\n\n\nGRUPPO GRAFICA: \n\nNiccol\xF2 Gracci\n\nTimotei
+    Sorea\n\nFrancesco Boscia\n\nElisei Mailat  -- (Referente)\n\nChristian Conti\n\nMirko
+    Pratesi\n\nGabriele Cerbioni\n\nFederico Baldini\n\nAlberto Pilloni\n\nPaolo
+    Betti\n\n\n\nGRUPPO SUPPORTO: \n\nChristian Conti  -- (Referente)\n\nMirko Pratesi\n\nPavel
+    Cavallini\n\nAlessandro Mazzinghi"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
   m_sharedMaterial: {fileID: 1418074792549281240, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
@@ -249,7 +252,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -188.70459, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -341,6 +344,135 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1073303647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1073303649}
+  - component: {fileID: 1073303648}
+  m_Layer: 0
+  m_Name: AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1073303648
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073303647}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4acdabe08fa4fe249a1634495e8724fe, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4acdabe08fa4fe249a1634495e8724fe, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1073303649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073303647}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1998186403}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181870589
 GameObject:
@@ -458,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddcb1cb6b25d9fd4f87b240c1499ac96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 50
+  scrollSpeed: 500
   creditsContainer: {fileID: 349626543}
   activationDelay: 1
 --- !u!1 &1550237010
@@ -625,6 +757,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716062513}
   m_CullTransparentMesh: 1
+--- !u!1 &1998186401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998186403}
+  - component: {fileID: 1998186402}
+  m_Layer: 0
+  m_Name: AudioPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1998186402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998186401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b856270296d37424d917f102091cc42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1073303648}
+--- !u!4 &1998186403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998186401}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.5, y: 11, z: 36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1073303649}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2060459768
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,3 +932,4 @@ SceneRoots:
   - {fileID: 2060459770}
   - {fileID: 1181870593}
   - {fileID: 637912589}
+  - {fileID: 1998186403}
