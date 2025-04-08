@@ -10,6 +10,9 @@ public class DiamondManager : MonoBehaviour
     public bool MesaDiamond = true;
     public bool MountainDiamond = true;
 
+    [Header("Configurazione Vittoria")]
+    public string victorySceneName = "VictoryScene"; // Assegna nell'Inspector
+
     public static DiamondManager Instance { get; private set; }
 
     [Header("UI Reference")]
@@ -78,6 +81,12 @@ public class DiamondManager : MonoBehaviour
                 MountainDiamond = false;
                 PlayerPrefs.SetInt("MountainDiamond", 0);
                 break;
+        }
+
+        // Controllo vittoria
+        if(diamonds >= 4 && !string.IsNullOrEmpty(victorySceneName))
+        {
+            SceneManager.LoadScene(victorySceneName);
         }
     }
 
