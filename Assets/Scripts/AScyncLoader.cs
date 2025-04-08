@@ -32,7 +32,6 @@ public class AScyncLoader : MonoBehaviour
 
 
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
-        loadOperation.allowSceneActivation = false;
 
         float progressValue = 0;
         while (!loadOperation.isDone)
