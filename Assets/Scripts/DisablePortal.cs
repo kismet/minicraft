@@ -14,7 +14,7 @@ public class DisableChildrenBasedOnFlag : MonoBehaviour
     {
         if (DiamondManager.Instance == null)
         {
-            Debug.LogError("DiamondManager non trovato!");
+            //Debug.LogError("DiamondManager non trovato!");
             return;
         }
 
@@ -35,7 +35,7 @@ public class DisableChildrenBasedOnFlag : MonoBehaviour
                 shouldDisableChildren = !DiamondManager.Instance.MountainDiamond;
                 break;
             default:
-                Debug.LogError("Nome scena non valido! Usa: Desert/Forest/Mesa/Mountain");
+                //Debug.LogError("Nome scena non valido! Usa: Desert/Forest/Mesa/Mountain");
                 return;
         }
 
