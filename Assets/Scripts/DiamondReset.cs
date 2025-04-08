@@ -4,13 +4,18 @@ public class DiamondHardResetter : MonoBehaviour
 {
     void Start()
     {
-        PlayerPrefs.DeleteKey("DiamondCount"); // Cancella il salvataggio
-        Debug.Log("Contatore diamanti resettato a zero!");
+        PlayerPrefs.DeleteKey("DiamondCount");
+        PlayerPrefs.DeleteKey("DesertDiamond");
+        PlayerPrefs.DeleteKey("ForestDiamond");
+        PlayerPrefs.DeleteKey("MesaDiamond");
+        PlayerPrefs.DeleteKey("MountainDiamond");
         
-        // Se DiamondManager è già presente, resetta anche il suo valore
+        Debug.Log("Reset completato: diamanti e flag ripristinati!");
+
         if (DiamondManager.Instance != null)
         {
             DiamondManager.Instance.ResetDiamonds();
+            DiamondManager.Instance.ResetAllDiamondFlags();
         }
     }
 }
