@@ -1,9 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class DiamondManager : MonoBehaviour
 {
+
+    // Flag per i diamanti
+    public bool DeserDiamond = true;
+    public bool ForestDiamond = true;
+    public bool MesaDiamond = true;
+    public bool MountainDiamond = true;
+
+
+
+
     public static DiamondManager Instance { get; private set; }
 
     [Header("UI Reference")]
