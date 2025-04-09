@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3173656513154468168}
   m_Layer: 6
   m_Name: cactus
-  m_TagString: Log
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,9 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85894b8e485558e4b9754f175a2f4055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockName: Log
-  durability: 2
+  blockName: Cactus
+  durability: 0.3
   stack: 64
   walkSpeed: 1
   isDangerous: 0
   damage: 0
+  isBreakable: 1
