@@ -1,22 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
 
 public class ToolbarUI : MonoBehaviour
 {
-    public UnityEngine.UI.Image[] slotHighlights; // Array delle immagini di evidenziazione degli slot
-    private int selectedSlot = 0;  // Slot selezionato (0-8)
+    [Header("Slot Highlights")]
+    public Image[] slotHighlights; // Evidenziazione slot
+    private int selectedSlot = 0;
+
+    [Header("Block Icons (Selected)")]
+    public GameObject[] blockIcons; // Immagini che rappresentano il blocco in mano
 
     void Start()
     {
-        // Controlla che l'array sia stato assegnato correttamente
         if (slotHighlights == null || slotHighlights.Length == 0)
         {
-            Debug.LogError("slotHighlights non � stato assegnato! Controlla l'Inspector.");
+            Debug.LogError("slotHighlights non è stato assegnato! Controlla l'Inspector.");
             return;
         }
 
+        if (blockIcons == null || blockIcons.Length == 0)
+        {
+            Debug.LogWarning("blockIcons non assegnato: verranno ignorate le icone a destra.");
+        }
+        else
+        {
+            DisattivaTutteLeIcone();
+        }
+
         AggiornaEvidenziazione();
+        AggiornaIconaSelezionata();
     }
 
     void Update()
@@ -34,13 +46,14 @@ public class ToolbarUI : MonoBehaviour
             }
         }
     }
-    
+
     void SelezionaSlot(int nuovoSlot)
     {
         if (nuovoSlot >= 0 && nuovoSlot < slotHighlights.Length)
         {
             selectedSlot = nuovoSlot;
             AggiornaEvidenziazione();
+            AggiornaIconaSelezionata();
         }
     }
 
@@ -49,6 +62,24 @@ public class ToolbarUI : MonoBehaviour
         for (int i = 0; i < slotHighlights.Length; i++)
         {
             slotHighlights[i].enabled = (i == selectedSlot);
+        }
+    }
+
+    void AggiornaIconaSelezionata()
+    {
+        if (blockIcons == null || blockIcons.Length == 0) return;
+
+        for (int i = 0; i < blockIcons.Length; i++)
+        {
+            blockIcons[i].SetActive(i == selectedSlot);
+        }
+    }
+
+    void DisattivaTutteLeIcone()
+    {
+        foreach (GameObject icon in blockIcons)
+        {
+            icon.SetActive(false);
         }
     }
 }
