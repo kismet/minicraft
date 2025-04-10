@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
         velocity.y -= gravity * Time.deltaTime;
 
-        float maxFallSpeed = -6f;
+        float maxFallSpeed = -9.81f;
         if (velocity.y < maxFallSpeed)
         {
             velocity.y = maxFallSpeed;

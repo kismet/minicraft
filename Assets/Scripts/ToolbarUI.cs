@@ -20,7 +20,7 @@ public class ToolbarUI : MonoBehaviour
 
         if (blockIcons == null || blockIcons.Length == 0)
         {
-            Debug.LogWarning("blockIcons non assegnato: verranno ignorate le icone a destra.");
+            //Debug.LogWarning("blockIcons non assegnato: verranno ignorate le icone a destra.");
         }
         else
         {
