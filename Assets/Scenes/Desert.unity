@@ -43210,6 +43210,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiamondCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 6676592051419949452, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 386
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676592051419949452, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -161.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8090288566356125027, guid: 9d0ed04d8770c46438d8c17f7d3fdb82, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -44588,6 +44596,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3020532149505616780, guid: f9e8bbb7feac842a88ceaaa652f501b8, type: 3}
   m_PrefabInstance: {fileID: 2110629937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2138566576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020532149505616780, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826079431510409880, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
+      propertyPath: m_Name
+      value: cactus (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a456bb1681fcb4c8d87f586b6160553f, type: 3}
 --- !u!1001 &844339327349510153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44665,3 +44730,4 @@ SceneRoots:
   - {fileID: 623263976}
   - {fileID: 468813059}
   - {fileID: 629600919}
+  - {fileID: 2138566576}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class HotBarManager : MonoBehaviour
 {
-    public GameObject[] hotbarItems = new GameObject[9]; // Slot della hotbar
+    public GameObject[] hotbarItems = new GameObject[8]; // Slot della hotbar
     public TMP_Text[] quantityTexts; // Riferimenti UI per quantità dei blocchi
     public int currentSlotIndex = 0; // Slot attualmente selezionato
     public Dictionary<string, int> inventory = new Dictionary<string, int>(); // Inventario
@@ -39,7 +39,7 @@ public class HotBarManager : MonoBehaviour
     {
         for (int i = 0; i < 9; i++)
         {
-            if (Input.GetKeyDown((i + 1).ToString()))
+            if (Input.GetKeyDown((i).ToString()))
                 currentSlotIndex = i;
         }
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement; // Aggiungi questa riga per usare SceneManager
+using UnityEngine.SceneManagement;
 
 public class BlockInteraction : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class BlockInteraction : MonoBehaviour
     [Header("Settings")]
     public float maxDistance = 4f;
     public string currentScreen = "Game";
-    public string diamondSceneName; // Aggiungi questo campo per configurare la scena dall'Inspector
+    public string diamondSceneName;
 
     private Transform selectedBlock;
     private Outline outlineEffect;
@@ -21,8 +21,8 @@ public class BlockInteraction : MonoBehaviour
         if (currentScreen == "Default") return;
 
         HandleBlockSelection();
-        HandleBlockInteraction();
-        HandleBlockPlacement();
+        HandleBlockInteraction();    // Sinistro per distruggere
+        HandleBlockPlacement();      // Destro per piazzare
     }
 
     void HandleBlockSelection()
@@ -54,7 +54,8 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockInteraction()
     {
-        if (Input.GetMouseButtonDown(0) && selectedBlock != null && hotBarManager.currentSlotIndex == 0)
+        //Tasto sinisto per spaccare
+        if (Input.GetMouseButtonDown(0) && selectedBlock != null)
         {
             Block blockData = selectedBlock.GetComponent<Block>();
 
@@ -83,9 +84,9 @@ public class BlockInteraction : MonoBehaviour
 
     void HandleBlockPlacement()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1)) // Tasto destro per posizionare
         {
-            if (hotBarManager.currentSlotIndex > 0 && hotBarManager.hotbarItems[hotBarManager.currentSlotIndex] != null)
+            if (hotBarManager.hotbarItems[hotBarManager.currentSlotIndex] != null)
             {
                 GameObject blockToPlace = hotBarManager.hotbarItems[hotBarManager.currentSlotIndex];
                 string blockType = blockToPlace.tag;
