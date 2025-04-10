@@ -88,6 +88,26 @@ public class DiamondManager : MonoBehaviour
         {
             SceneManager.LoadScene(victorySceneName);
         }
+
+        // Dopo aver aggiornato il flag per il diamante, ad esempio:
+        if (currentScene == "Desert")
+        {
+            DiamondManager.Instance.DesertDiamond = false;
+            PlayerPrefs.SetInt("DesertDiamond", 0);
+            
+            Debug.Log("[DiamondManager] Diamante Desert raccolto. Aggiorno i portali...");
+
+            PortalActivator[] portals = FindObjectsOfType<PortalActivator>(true);
+            foreach (var portal in portals)
+            {
+                if (portal.associatedDiamond == PortalActivator.SceneDiamondType.Desert)
+                {
+                    portal.UpdatePortalState();
+                }
+            }
+}
+
+
     }
 
     public void ResetDiamonds() => Diamonds = 0;

@@ -12,18 +12,35 @@ public class PlayerController : MonoBehaviour
     private Camera playerCamera;
     private float xRotation = 0f;
 
+    private bool isCursorLocked = true;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
-        Cursor.lockState = CursorLockMode.Locked;
+        LockCursor(true);
     }
 
     void Update()
     {
-        MovePlayer();
-        JumpHandler();
-        LookAround();
+        if (isCursorLocked)
+        {
+            MovePlayer();
+            JumpHandler();
+            LookAround();
+        }
+
+        // ESC per sbloccare il cursore
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LockCursor(false);
+        }
+
+        // Clic sinistro per ribloccare il cursore
+        if (!isCursorLocked && Input.GetMouseButtonDown(0))
+        {
+            LockCursor(true);
+        }
     }
 
     void MovePlayer()
@@ -31,7 +48,6 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        // Prendi la direzione orizzontale della camera, ignorando l'inclinazione verticale
         Vector3 cameraForward = playerCamera.transform.forward;
         Vector3 cameraRight = playerCamera.transform.right;
 
@@ -47,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
         velocity.y -= gravity * Time.deltaTime;
 
-        float maxFallSpeed = -6f;
+        float maxFallSpeed = -9.81f;
         if (velocity.y < maxFallSpeed)
         {
             velocity.y = maxFallSpeed;
@@ -74,5 +90,12 @@ public class PlayerController : MonoBehaviour
 
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
+    }
+
+    void LockCursor(bool shouldLock)
+    {
+        isCursorLocked = shouldLock;
+        Cursor.lockState = shouldLock ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !shouldLock;
     }
 }

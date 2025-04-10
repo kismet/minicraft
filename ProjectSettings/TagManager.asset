@@ -17,6 +17,7 @@ TagManager:
   - Special
   - Portal
   - Terracotta2
+  - Cactus
   layers:
   - Default
   - TransparentFX
