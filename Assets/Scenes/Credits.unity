@@ -191,8 +191,8 @@ MonoBehaviour:
     - Christian Conti\n\nStudente - Mirko Pratesi\n\nStudente - Gabriele Cerbioni\n\nStudente
     - Federico Baldini\n\nStudente - Alberto Pilloni\n\nStudente - Paolo Betti\n\n\n\n\n\nStudente
     - Christian Conti  -- (Referente)\n\nStudente - Mirko Pratesi\n\nStudente - Pavel
-    Cavallini\n\nStudente - Alessandro Mazzinghi\n\nStudente - Elisei Mailat\n\n\n\n\n\n\n\n\t\tAI
-    - ChatGPT\n\n\t\tAI - DeepSeek\n\n\t\tAI - Gemini\n\n\t\tAI - Cloude\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    Cavallini\n\nStudente - Alessandro Mazzinghi\n\nStudente - Elisei Mailat\n\n\n\n\n\n\n\n\n\tAI
+    - ChatGPT\n\n\tAI - DeepSeek\n\n\tAI - Gemini\n\n\tAI - Cloude\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
   m_sharedMaterial: {fileID: 1418074792549281240, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
@@ -598,6 +598,7 @@ MonoBehaviour:
   scrollSpeed: 75
   creditsContainer: {fileID: 349626543}
   activationDelay: 0.5
+  finalSceneName: FinalLevel
 --- !u!1 &1550237010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,8 +1009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76, y: -0.75}
-  m_SizeDelta: {x: 548, y: 4134.5}
+  m_AnchoredPosition: {x: -132.5, y: -0.75}
+  m_SizeDelta: {x: 435, y: 4134.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081960036
 MonoBehaviour:
