@@ -84,9 +84,13 @@ public class DiamondManager : MonoBehaviour
         }
 
         // Controllo vittoria
-        if(diamonds >= 4 && !string.IsNullOrEmpty(victorySceneName))
+        if(diamonds == 4 && !string.IsNullOrEmpty(victorySceneName))
         {
             SceneManager.LoadScene(victorySceneName);
+        }
+        else if(diamonds == 5 && !string.IsNullOrEmpty(victorySceneName))
+        {
+            SceneManager.LoadScene("Victory");
         }
 
         // Dopo aver aggiornato il flag per il diamante, ad esempio:
