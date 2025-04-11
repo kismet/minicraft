@@ -1,36 +1,28 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement; // Aggiungi questa riga per usare SceneManager
+using UnityEngine.SceneManagement;
 
 public class BlockInteraction : MonoBehaviour
 {
     [Header("References")]
     public Camera playerCamera;
     public HotBarManager hotBarManager;
-    
+
     [Header("Settings")]
     public float maxDistance = 4f;
     public string currentScreen = "Game";
-    public string diamondSceneName; // Aggiungi questo campo per configurare la scena dall'Inspector
+    public string diamondSceneName;
 
     private Transform selectedBlock;
-    private Transform breakingBlock;
     private Outline outlineEffect;
-    private bool isBreaking = false;
-    private Coroutine breakCoroutine;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
         if (currentScreen == "Default") return;
 
         HandleBlockSelection();
-        HandleBlockDestruction();
-        HandleBlockPlacement();
+        HandleBlockInteraction();    // Sinistro per distruggere
+        HandleBlockPlacement();      // Destro per piazzare
     }
 
     void HandleBlockSelection()
@@ -58,103 +50,43 @@ public class BlockInteraction : MonoBehaviour
         {
             selectedBlock = null;
         }
-
-        if (isBreaking && breakingBlock != selectedBlock)
-        {
-            StopBreaking();
-        }
     }
 
-    void HandleBlockDestruction()
+    void HandleBlockInteraction()
     {
-        if (currentScreen == "Default") return;
-
+        //Tasto sinisto per spaccare
         if (Input.GetMouseButtonDown(0) && selectedBlock != null)
         {
             Block blockData = selectedBlock.GetComponent<Block>();
 
-            if (blockData != null && blockData.IsBreakable && hotBarManager.currentSlotIndex == 0)
+            if (blockData != null && blockData.IsBreakable)
             {
-                if (!isBreaking)
+                string blockType = selectedBlock.tag;
+
+                if (blockType == "Diamond")
                 {
-                    breakingBlock = selectedBlock;
-                    breakCoroutine = StartCoroutine(BreakBlock(selectedBlock));
+                    DiamondManager.Instance.AddDiamond();
+                    Destroy(selectedBlock.gameObject);
+
+                    if (!string.IsNullOrEmpty(diamondSceneName))
+                    {
+                        SceneManager.LoadScene(diamondSceneName);
+                    }
+                }
+                else
+                {
+                    hotBarManager.AddToInventory(blockType, 1);
+                    Destroy(selectedBlock.gameObject);
                 }
             }
         }
-
-        if (Input.GetMouseButtonUp(0) && isBreaking)
-        {
-            StopBreaking();
-        }
-    }
-
-    IEnumerator BreakBlock(Transform block)
-    {
-        isBreaking = true;
-        Block blockData = block.GetComponent<Block>();
-        if (blockData == null || !blockData.IsBreakable)
-        {
-            StopBreaking();
-            yield break;
-        }
-
-        float breakTime = blockData.Durability;
-        float elapsedTime = 0f;
-        string blockType = block.tag;
-
-        while (elapsedTime < breakTime)
-        {
-            if (!isBreaking || breakingBlock != selectedBlock)
-            {
-                StopBreaking();
-                yield break;
-            }
-
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        if (blockType == "Diamond")
-        {
-            
-            DiamondManager.Instance.AddDiamond(); // Incrementa e salva automaticamente
-            // Distruggi il blocco
-            Destroy(block.gameObject);
-            
-            // Carica la scena specificata
-            if (!string.IsNullOrEmpty(diamondSceneName))
-            {
-                SceneManager.LoadScene(diamondSceneName);
-            }
-        }
-        else
-        {
-            hotBarManager.AddToInventory(blockType, 1);
-            Destroy(block.gameObject);
-        }
-
-        isBreaking = false;
-    }
-
-    void StopBreaking()
-    {
-        if (breakCoroutine != null)
-        {
-            StopCoroutine(breakCoroutine);
-            breakCoroutine = null;
-        }
-        isBreaking = false;
-        breakingBlock = null;
     }
 
     void HandleBlockPlacement()
     {
-        if (currentScreen == "Default") return;
-
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)) // Tasto destro per posizionare
         {
-            if (hotBarManager.currentSlotIndex > 0 && hotBarManager.hotbarItems[hotBarManager.currentSlotIndex] != null)
+            if (hotBarManager.hotbarItems[hotBarManager.currentSlotIndex] != null)
             {
                 GameObject blockToPlace = hotBarManager.hotbarItems[hotBarManager.currentSlotIndex];
                 string blockType = blockToPlace.tag;

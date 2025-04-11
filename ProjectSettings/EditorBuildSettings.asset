@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mesa.unity
     guid: 0a6760f94d8b3ae4b955990df6b1d4e4
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel.unity
+    guid: 344bccd4f4c74d749b44f9c0939689c7
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 65f997b9f2d790d4bb3c6b1214a7433d
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 908cc5a5d0ca04447af3f43b1cfe4a89
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: fbbf24d0c2db240a486901a4ae9b803a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
