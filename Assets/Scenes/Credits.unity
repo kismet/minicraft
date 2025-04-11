@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85.28931, y: 2603.5}
-  m_SizeDelta: {x: 636, y: 4127}
+  m_AnchoredPosition: {x: 57.39734, y: 2608}
+  m_SizeDelta: {x: 714, y: 4136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349626544
 MonoBehaviour:
@@ -177,17 +177,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\n\n\n\n\nStefano Lenzi \n\nPierocarmine Fantauzzi\n\nKatiuscia Totti\n\n\n\n\n\nElisei
-    Mailat\n\nPavel Cavallini  -- (Referente)\n\nChristian Conti\n\n\n\n\n\n\nRebecca
-    Fatticcioni\n\nAlessandro Mazzinghi\n\nSheila Sulis\n\nClaudio Falchi  -- (Referente)\n\nElisei
-    Mailat\n\n\n\n\n\n\nNicholas Ticciati\n\nAlessandro Mazzinghi  -- (Referente)\n\nElisei
-    Mailat\n\nMirko Pratesi\n\nPavel Cavallini\n\nChristian Bangoni\n\n\n\n \n\n\nAlberto
-    Pilloni\n\nCristian Terzi\n\nMirko Pratesi  -- (Referente)\n\nPaolo Betti\n\nChristian
-    Conti\n\n\n\n\n\nNiccol\xF2 Gracci\n\nTimotei Sorea\n\nFrancesco Boscia\n\nElisei
-    Mailat  -- (Referente)\n\nChristian Conti\n\nMirko Pratesi\n\nGabriele Cerbioni\n\nFederico
-    Baldini\n\nAlberto Pilloni\n\nPaolo Betti\n\n\n\n\n\nChristian Conti  -- (Referente)\n\nMirko
-    Pratesi\n\nPavel Cavallini\n\nAlessandro Mazzinghi\n\nElisei Mailat\n\n\n\n\n\n\n\nAI\n\n\n\n\n\n\n\n\n\n\n\n\nAlt+F4
-    : )\n\nCmd + Q  per i mac users"
+  m_text: "\n\n\n\n\n\nDocente - Stefano Lenzi \n\nDocente - Pierocarmine Fantauzzi\n\nDocente
+    - Katiuscia Totti\n\n\n\n\n\nStudente - Pavel Cavallini  -- (Referente)\n\nStudente
+    - Elisei Mailat\n\nStudente - Christian Conti\n\n\n\n\n\n\n\nStudente - Claudio
+    Falchi  -- (Referente)\n\nStudente - Rebecca Fatticcioni\n\nStudente - Alessandro
+    Mazzinghi\n\nStudente - Sheila Sulis\n\nStudente - Elisei Mailat\n\n\n\n\n\nStudente
+    - Alessandro Mazzinghi  -- (Referente)\n\nStudente - Nicholas Ticciati\n\nStudente
+    - Elisei Mailat\n\nStudente - Mirko Pratesi\n\nStudente - Pavel Cavallini\n\nStudente
+    - Christian Bangoni\n\n\n\n \n\n\nStudente - Mirko Pratesi  -- (Referente)\n\nStudente
+    - Alberto Pilloni\n\nStudente - Cristian Terzi\n\nStudente - Paolo Betti\n\nStudente
+    - Christian Conti\n\n\n\n\n\nStudente - Elisei Mailat  -- (Referente)\n\nStudente
+    - Niccol\xF2 Gracci\n\nStudente - Timotei Sorea\n\nStudente - Francesco Boscia\n\nStudente
+    - Christian Conti\n\nStudente - Mirko Pratesi\n\nStudente - Gabriele Cerbioni\n\nStudente
+    - Federico Baldini\n\nStudente - Alberto Pilloni\n\nStudente - Paolo Betti\n\n\n\n\n\nStudente
+    - Christian Conti  -- (Referente)\n\nStudente - Mirko Pratesi\n\nStudente - Pavel
+    Cavallini\n\nStudente - Alessandro Mazzinghi\n\nStudente - Elisei Mailat\n\n\n\n\n\n\n\n\t\tAI
+    - ChatGPT\n\n\t\tAI - DeepSeek\n\n\t\tAI - Gemini\n\n\t\tAI - Cloude\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
   m_sharedMaterial: {fileID: 1418074792549281240, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
@@ -221,7 +226,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1003,8 +1008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 636, y: 4127}
+  m_AnchoredPosition: {x: -76, y: -0.75}
+  m_SizeDelta: {x: 548, y: 4134.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081960036
 MonoBehaviour:
@@ -1026,10 +1031,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "MINIPLACE -- Credits\n\n\nDOCENTI\n\n\n\n\n\n\n\nTEAM DI SVILUPPO\n\n\n\n\n\n\n\n\nPRESENTAZIONE:\n\n\n\n\n\n\n\n\n\n\n\nGESTIONE:\n\n\n\n\n\n\n\n\n\n\n\n
-    \nGRUPPO REGOLE:\n\n\n\n\n\n\n\n\n\n\n\nGRAFICA:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTEAM
-    DI SUPPORTO\n\n\n\n\n\n\n\n\n\n\n\n\nRINGRAZIAMENTI SPECIALI:\n\n\n\n\n\n\n\n\n\nPER
-    CHIUDERE:\n\n\n\n"
+  m_text: "MINIPLACE -- Credits\n\n\nDOCENTI\n\n\n\n\n\n\nTEAM DI SVILUPPO\n\n\n\n\n\n\n\nPRESENTAZIONE\n\n\n\n\n\n\n\n\n\nGESTIONE\n\n\n\n\n\n\n\n\n\n\n
+    \nGRUPPO REGOLE\n\n\n\n\n\n\n\n\n\nGRAFICA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTEAM
+    DI SUPPORTO\n\n\n\n\n\n\n\n\n\n\nRINGRAZIAMENTI SPECIALI\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
   m_sharedMaterial: {fileID: 1418074792549281240, guid: 21f4464817f59ea498e53d9b2cb82676, type: 2}
@@ -1038,8 +1042,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278895894
+  m_fontColor: {r: 0.08769747, g: 0.7735849, b: 0.040138844, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1056,8 +1060,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.1
-  m_fontSizeBase: 45.1
+  m_fontSize: 51.2
+  m_fontSizeBase: 51.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
