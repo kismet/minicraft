@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 
 public class HealthManager : MonoBehaviour
@@ -22,6 +23,9 @@ public class HealthManager : MonoBehaviour
         currentHearts = maxHearts;
         lastYPosition = transform.position.y;
         UpdateHeartsUI();
+
+        // Avvia la rigenerazione della vita
+        StartCoroutine(RegenerateHealthOverTime());
     }
 
     void Update()
@@ -31,7 +35,6 @@ public class HealthManager : MonoBehaviour
 
     void CheckFallDamage()
     {
-        // Verifica quando il player cade e tocca il suolo
         float currentY = transform.position.y;
 
         if (!isGrounded && IsGrounded())
@@ -50,7 +53,6 @@ public class HealthManager : MonoBehaviour
         isGrounded = IsGrounded();
     }
 
-    // Metodo per calcolare se il player tocca terra
     bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, 1.1f);
@@ -69,9 +71,6 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-
-
-
     void UpdateHeartsUI()
     {
         for (int i = 0; i < heartImages.Count; i++)
@@ -80,12 +79,26 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    // Danno da contatto con cactus
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Cactus"))
         {
             TakeDamage(1);
+        }
+    }
+
+    IEnumerator RegenerateHealthOverTime()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(2f); // ogni 2 secondi
+
+            if (currentHearts < maxHearts)
+            {
+                currentHearts += 1;
+                currentHearts = Mathf.Clamp(currentHearts, 0, maxHearts);
+                UpdateHeartsUI();
+            }
         }
     }
 }
